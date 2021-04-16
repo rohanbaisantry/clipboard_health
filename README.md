@@ -1,4 +1,4 @@
-This is a NextJS App which using TailwindCSS, Mongoose and MongoDB.
+This is a NextJS App which uses TailwindCSS, Mongoose and MongoDB.
 
 ## Getting Started
 
