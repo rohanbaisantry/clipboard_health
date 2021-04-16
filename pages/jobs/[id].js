@@ -7,9 +7,8 @@ import getRelativeTimeString from "../../utils/get-relative-time-string";
 
 export default function SpecificJob(props) {
     const salaryRangeString =
-        (props.salary_range &&
-            props.salary_range.length > 0 &&
-            `$${props.salary_range[0]} - $${props.salary_range[1]}`) ||
+        (props.jobData.salary_range &&
+            `$${props.jobData.salary_range[0]} - $${props.jobData.salary_range[1]}`) ||
         "";
     return (
         <>
