@@ -13,7 +13,6 @@ export default function Layout({ children }) {
 
     Router.onRouteChangeComplete = (url) => {
         setLoading(false);
-        console.log("complete: ", url);
     };
 
     Router.onRouteChangeError = (err, url) => {
