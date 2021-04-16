@@ -51,7 +51,7 @@ export default function Index(props) {
                 </div>
                 <div className="py-8 px-4 col-span-4 sm:col-span-3 bg-white shadow overflow-hidden sm:rounded-lg">
                     <div className="mb-8">
-                        <SortComponent jobCount={getJobCount(jobs)} />
+                        <SortComponent jobCount={getJobCount(jobs)} loading={loading} />
                     </div>
                     {loading ? (
                         <div className="flex items-center justify-center w-full mt-8 h-96">
