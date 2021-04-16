@@ -38,7 +38,7 @@ const JobCard = ({ jobDetails, index }) => {
         "";
     const router = useRouter();
     const onClickViewJob = () => {
-        router.query.id = jobDetails._id;
+        router.query = { id: jobDetails._id };
         router.pathname = "/jobs/[id]";
         router.push(router);
     };

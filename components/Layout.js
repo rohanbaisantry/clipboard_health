@@ -8,11 +8,12 @@ export default function Layout({ children }) {
     const [loading, setLoading] = React.useState(false);
 
     Router.onRouteChangeStart = (url) => {
-        setLoading(true);
+        url.includes("/jobs/") && setLoading(true);
     };
 
     Router.onRouteChangeComplete = (url) => {
         setLoading(false);
+        console.log("complete: ", url);
     };
 
     Router.onRouteChangeError = (err, url) => {
