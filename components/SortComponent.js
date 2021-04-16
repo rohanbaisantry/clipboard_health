@@ -87,7 +87,7 @@ export default function SortComponent(props) {
     return (
         <div className="w-full flex justify-between sm:block lg:flex">
             <div className="flex items-center mb-4 lg:mb-0">
-                <div className="mr-1">{props.jobCount}</div>
+                <div className="mr-1">{props.loading ? "... " : props.jobCount}</div>
                 <div>Job postings</div>
             </div>
             <div className="hidden sm:flex">
@@ -104,4 +104,8 @@ export default function SortComponent(props) {
 
 SortComponent.propTypes = {
     jobCount: PropTypes.number.isRequired,
+    loading: PropTypes.bool,
+};
+SortComponent.defaultProps = {
+    loading: false,
 };
