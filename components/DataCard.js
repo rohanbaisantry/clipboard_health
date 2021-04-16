@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-import getRelativeTimeString from "../utils/relative-string-string";
+import getRelativeTimeString from "../utils/get-relative-time-string";
 import { useRouter } from "next/router";
 
 const getIcon = (open) => {

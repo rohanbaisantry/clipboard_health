@@ -3,7 +3,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 
 import { getJob } from "../../utils/actions";
-import getRelativeTimeString from "../../utils/relative-string-string";
+import getRelativeTimeString from "../../utils/get-relative-time-string";
 
 export default function SpecificJob(props) {
     const salaryRangeString =
