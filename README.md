@@ -1,6 +1,6 @@
 ## This is a NextJS App which uses TailwindCSS, Mongoose and MongoDB
 
-[App's Public URL](http://localhost:3000)
+[App's Public URL](https://clipboard-health-rohanbaisantry.vercel.app/)
 
 ```
 To run the development server:
