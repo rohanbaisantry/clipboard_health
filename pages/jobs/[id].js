@@ -16,7 +16,7 @@ export default function SpecificJob(props) {
             <Head>
                 <title>{props.jobData.job_title} | Explore Health</title>
             </Head>
-            <div className=" p-10">
+            <div className="px-5 pb-10 sm:pt-10">
                 <div className="cursor-pointer flex justify-between px-4 py-5 sm:px-6">
                     <div>
                         <h3 className="text-lg leading-6 font-medium text-gray-900">

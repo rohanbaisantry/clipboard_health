@@ -1,6 +1,24 @@
+import Router from "next/router";
+import React from "react";
 import Link from "next/link";
 
+import Loader from "./Loader";
+
 export default function Layout({ children }) {
+    const [loading, setLoading] = React.useState(false);
+
+    Router.onRouteChangeStart = (url) => {
+        setLoading(true);
+    };
+
+    Router.onRouteChangeComplete = (url) => {
+        setLoading(false);
+    };
+
+    Router.onRouteChangeError = (err, url) => {
+        setLoading(false);
+    };
+
     return (
         <div className="bg-gray-100 w-full min-w-full flex flex-col min-h-screen">
             {/* MenuBar */}
@@ -16,7 +34,15 @@ export default function Layout({ children }) {
                 </div>
             </div>
             {/* Main */}
-            <div className="mt-5 flex-grow">{children}</div>
+            <div className="mt-5 flex-grow">
+                {loading ? (
+                    <div className="flex items-center justify-center mt-10">
+                        <Loader />
+                    </div>
+                ) : (
+                    children
+                )}
+            </div>
             {/* Footer */}
             <div className="mt-10 py-10 px-10 bg-white w-full">
                 <div className="text-center sm:text-left max-w-full md:max-w-screen-sm">

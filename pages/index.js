@@ -5,22 +5,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import SearchBar from "../components/SearchBar";
+import Loader from "../components/Loader";
 import SortComponent from "../components/SortComponent";
 const Filters = dynamic(() => import("../components/Filters"), { ssr: false });
 const DataCard = dynamic(() => import("../components/DataCard"), { ssr: false });
 
 import { getJobs, getFilters } from "../utils/actions";
 import getJobCount from "../utils/get-job-count";
-
-const Loader = () => {
-    return (
-        <div className="loader bg-gray-50 p-5 rounded-full flex space-x-3">
-            <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
-            <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
-            <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
-        </div>
-    );
-};
 
 export default function Index(props) {
     const router = useRouter();
