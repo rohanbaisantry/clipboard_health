@@ -1,0 +1,22 @@
+[
+    {
+        "key": "location",
+        "label": "Location"
+    },
+    {
+        "key": "role",
+        "label": "Role"
+    },
+    {
+        "key": "department",
+        "label": "Department"
+    },
+    {
+        "key": "education",
+        "label": "Education"
+    },
+    {
+        "key": "experience",
+        "label": "Experience"
+    }
+]
