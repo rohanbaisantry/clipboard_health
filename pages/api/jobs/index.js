@@ -23,7 +23,6 @@ const getValueFromAllowedFilters = async (query) => {
     const allowedFilters = filters.map((filter) => {
         return filter.name;
     });
-    console.log(allowedFilters);
     let filterQuery = {};
     allowedFilters.forEach((filter) => {
         if (query[filter]) filterQuery[filter] = { $in: query[filter].split(",") };
