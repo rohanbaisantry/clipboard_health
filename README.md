@@ -12,6 +12,6 @@ To run the production server locally:
 npm install
 npm run build
 npm run start
-Open http://localhost:3000with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
 ```
