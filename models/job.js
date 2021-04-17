@@ -5,7 +5,7 @@ let job = new Schema({
     hospital_name: String,
     main_job_title: String,
     required_skills: [String],
-    county: [String],
+    county: String,
     zip: Number,
     location: String,
     nurse_patient_ratio: String,

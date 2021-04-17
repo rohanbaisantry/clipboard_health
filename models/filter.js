@@ -12,4 +12,5 @@ var filter = new Schema({
     },
 });
 
-export default mongoose.models.filters || mongoose.model("filters", filter);
+const model = mongoose.models.filters || mongoose.model("filters", filter);
+export default model;
