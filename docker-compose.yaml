@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+    mongodb:
+        restart: always
+        image: mongo:latest
+        container_name: mongodb
+        ports:
+            - "27017:27017"
+        volumes:
+            - ./store/:/var/lib/mongodb
+        networks:
+            - mongodbnetwork
+
+volumes:
+    mongodb:
+        driver: local
+
+networks:
+    mongodbnetwork:
+        driver: bridge
