@@ -1,5 +1,5 @@
 import { createMocks } from "node-mocks-http";
-import handlerFilter from "../../api/filters";
+import handlerFilter from "../pages/api/filters";
 
 describe("/api/filters", () => {
     test("Get request returns 200 with success=true", async () => {
