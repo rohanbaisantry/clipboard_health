@@ -23,15 +23,20 @@ To run the tests:
 npm install
 npm run test
 
-
-Client URLs:
-- "/" -> GET -> Job Search
-- "/jobs/[id] -> GET -> Specific Job Details
-
-APIs:
-- "/api/filters" -> GET -> Get all filters
-- "/api/jobs" -> GET -> Get all jobs satisfying the filter & search criteria & return a sorted list of jobs based on the sort parameters passed.
-- "/api/jobs/[id]" -> GET -> get specific job details using the job's ID
-- "/api/reset-db" -> POST -> This will reset your MongoDB using the files in "/data"
-
 ```
+
+#### Client URLs:
+
+-   "/" -> GET -> Job Search
+-   "/jobs/[id] -> GET -> Specific Job Details
+
+#### APIs:
+
+-   "/api/filters" -> GET -> Get all filters
+-   "/api/jobs" -> GET -> Get all jobs satisfying the filter & search criteria and return a sorted list of jobs based on the sort parameters passed.
+-   "/api/jobs/[id]" -> GET -> get specific job details using the job's ID
+-   "/api/reset-db" -> POST -> This will reset your MongoDB using the files in "/data"
+
+#### Notes
+
+I am using Mongo's text search for the search option in the application, and hence, if you you search for "Urology Nurse Practitioner" it will match jobs which contain the words "Urology", "Nurse" & "Practitioner" in full.
