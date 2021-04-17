@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import Loader from "./Loader";
 
+import { resetDB } from "../utils/actions";
+
 export default function Layout({ children }) {
     const [loading, setLoading] = React.useState(false);
 
@@ -19,16 +21,33 @@ export default function Layout({ children }) {
         setLoading(false);
     };
 
+    const onClickResetDB = async () => {
+        setLoading(true);
+        const result = await resetDB();
+        setLoading(false);
+        if (result) {
+            Router.reload();
+        }
+    };
+
     return (
         <div className="bg-gray-100 w-full min-w-full flex flex-col min-h-screen">
             {/* MenuBar */}
             <div className="sticky top-0 w-full min-w-full z-10">
                 <div className="container bg-white p-5 w-full min-w-full shadow opacity-100">
                     <nav className="flex-row md:justify-between">
-                        <div className="flex flex-row justify-between text-lg leading-6 font-medium text-blue-500 ">
-                            <Link href="/">
-                                <a>HEALTH EXPLORE</a>
-                            </Link>
+                        <div className="flex flex-row justify-between text-lg leading-6 font-medium text-blue-500 items-center">
+                            <div className="flex-grow">
+                                <Link href="/">
+                                    <a>HEALTH EXPLORE</a>
+                                </Link>
+                            </div>
+                            <button
+                                onClick={onClickResetDB}
+                                className="bg-transparent hover:bg-blue-500 text-blue-700 font-regular hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                            >
+                                Reset DB
+                            </button>
                         </div>
                     </nav>
                 </div>

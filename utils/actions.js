@@ -49,3 +49,10 @@ export async function getJob(job_id) {
     }
     return job;
 }
+
+export async function resetDB() {
+    let url = constants.apiURL + `/reset-db`;
+    const response = await fetch(url, { method: "POST" });
+    const result = await response.json();
+    return result.success;
+}
