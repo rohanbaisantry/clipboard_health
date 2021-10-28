@@ -1,7 +1,5 @@
 ## This is a NextJS App which uses TailwindCSS, Mongoose and MongoDB
 
-[App's Public URL](https://clipboard-health-rohanbaisantry.vercel.app/)
-
 ```
 
 To start your local mongo db server:
